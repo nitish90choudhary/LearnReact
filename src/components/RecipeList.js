@@ -4,18 +4,14 @@ const RecipeList = (props) =>(
     <div style={props.style}>
         <h2>RecipeList</h2>
             <ul>
-                <li>
-                    <span>Creepy Halloween Skull Cupcakes</span>
-                    <span>Dessert</span>
+                {props.recipes.map(recipe => (
+                    <li 
+                    key={recipe.id} 
+                    onClick={()=> props.onClick(recipe.id)}>
+                    <span>{recipe.name}</span>
+                    <span>{recipe.category}</span>
                 </li>
-                <li>
-                    <span>Blueberry Sour Cream Coffee Cake</span>
-                    <span>Dessert</span>
-                </li>
-                <li>
-                    <span>Chicken Tenderlion in the slow Cooker</span>
-                    <span>Meat</span>
-                </li>
+                ))}
             </ul>
     </div>
 )

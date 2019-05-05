@@ -1,3 +1,7 @@
 .pointer{
     cursor: pointer;
 }
+
+.boxed-image{
+    height: 350px;
+}

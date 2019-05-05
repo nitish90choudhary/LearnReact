@@ -20,15 +20,20 @@ const RecipeDetails = (props) =>{
     className={classNames('p2 bg-white',props.className)}
     >
         <h2 className="h2">{props.recipe.name}</h2>
-        <img className="fit" src={props.recipe.image} />
+        <img className="fit boxed-image" src={props.recipe.image} />
         <div>
-            <span>{props.recipe.category}</span>
+            <span className="blue">Category : </span>
+            <span>{props.recipe.category} </span>
+            <span className="blue">Calories : </span>
             <span>{props.recipe.calories}</span>
         </div>
         <h3>Ingredients</h3>
         <ul>
             {props.recipe.ingredients.map(ingredient =>(
-            <li key ={ingredient}>
+            <li 
+            key ={ingredient}
+            className="m1"
+            >
                 {ingredient}
             </li>
         ))}
@@ -36,7 +41,10 @@ const RecipeDetails = (props) =>{
         <h3>Steps</h3>
         <ol>
         {props.recipe.steps.map(step =>(
-            <li key ={step}>
+            <li 
+            key ={step}
+            className="m1"
+            >
              {step}
             </li>
         ))}

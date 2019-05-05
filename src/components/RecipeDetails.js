@@ -22,9 +22,9 @@ const RecipeDetails = (props) =>{
         <h2 className="h2">{props.recipe.name}</h2>
         <img className="fit boxed-image" src={props.recipe.image} />
         <div>
-            <span className="blue">Category : </span>
+            <span className="blue bold">Category : </span>
             <span>{props.recipe.category} </span>
-            <span className="blue">Calories : </span>
+            <span className="blue bold">Calories : </span>
             <span>{props.recipe.calories}</span>
         </div>
         <h3>Ingredients</h3>

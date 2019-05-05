@@ -7,7 +7,14 @@
   "scripts": {
     "start": "./node_modules/.bin/webpack-dev-server",
     "build": "./node_modules/.bin/webpack",
-    "lint": "./node_modules/.bin/eslint ./src"
+    "lint": "./node_modules/.bin/eslint ./src",
+    "precommit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.js":[
+      "yarn lint",
+      "git add ."
+    ]
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
@@ -28,6 +35,7 @@
     "postcss-cssnext": "3.0.2",
     "postcss-import": "11.0.0",
     "postcss-loader": "2.0.8",
+    "prettier": "^1.17.0",
     "style-loader": "0.19.0",
     "webpack": "^4.30.0",
     "webpack-cli": "^3.3.1",
